@@ -76,6 +76,7 @@ let package = Package(
                 "secp256k1.swift",
                 "ECDSA.swift",
                 "SafeCompare.swift",
+                "Schnorr.swift",
                 "NISTCurvesKeys.swift",
                 "PrettyBytes.swift",
                 "EdDSA.swift",

@@ -46,6 +46,8 @@ let package = Package(
                 // https://github.com/bitcoin-core/secp256k1/blob/master/src/basic-config.h#L12-L13
                 .define("ECMULT_WINDOW_SIZE", to: "15"),
                 .define("ECMULT_GEN_PREC_BITS", to: "4"),
+                .define("ENABLE_MODULE_RECOVERY", to: "1"),
+                .define("ENABLE_MODULE_SCHNORRSIG", to: "1"), 
                 // Enabling additional secp256k1 modules.
                 .define("SECP256K1_ECDH_H"),
                 .define("SECP256K1_MODULE_ECDH_MAIN_H"),
@@ -79,7 +81,9 @@ let package = Package(
                 "NISTCurvesKeys.swift",
                 "PrettyBytes.swift",
                 "EdDSA.swift",
-                "Digests.swift"
+                "Digests.swift",
+                "SignError.swift",
+                "EllipticCurveEncrypterSecp256k1.swift"
             ]
         ),
         .testTarget(
